@@ -7,8 +7,31 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+ 
+<!--
+  <button ion-button color="light" (click)="pulsaste()">Miboton</button>
+<button ion-button>Default</button>
+<button ion-button color="secondary">Secondary</button>
+<button ion-button color="danger">Danger</button>
+<button ion-button color="dark">Dark</button>
+
+
+<ion-list>
+  <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+    {{ item }}
+  </button>  
+</ion-list>
+
+-->
+<ion-list>
+  <ion-item>
+    <ion-label>Lenguaje</ion-label>
+    <ion-select [(ngModel)]="lenguaje">
+      <ion-option *ngFor="let item of items" value="{{item}}" (ionSelect)="seleccion()">{{item}}</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+
+
 </ion-content>
